@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basketball - Sitios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href="css/font-awesome.css" rel="stylesheet"> 
+
+    <style>
+      /* Estilo CSS...se la da la alturaque tendra el mapa*/
+      
+      #map {
+        margin: auto;
+        height: 70%;
+        width: 80%;
+      }
+      /*Del mismo modo el html y cuerpo tinene que tener una 
+      altura para poder visualizar el mapa */
+      html, body {
+        padding: 0px;
+        height: 100%;
+      }
+    </style>
+  </head>
+ <body>
+    <!--Se crea Un div para contener el mpa-->
+    <div id="map"></div>
+
+    <script>
+      /*Variable que sirve pa almacenar el mapa*/
+      
+
+      function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          /*distancia que tendra la visualizacion del mapa*/
+          zoom: 13,
+          /*Cordenadas de */
+          center: {lat: -4.007891, lng: -79.211277},
+          mapTypeId: 'roadmap'
+        });
+        
+        var imageb = './images/basket.png';
+
+          var marker14 = new google.maps.Marker({
+             position: {lat: -3.973673, lng: -79.20277},
+             map: map,
+             icon:imageb,
+             animation: google.maps.Animation.DROP,
+             title: 'Canchas de Baloncesto - Jipiro'
+          });
+          var marker15 = new google.maps.Marker({
+             position:{lat: -4.007394, lng: -79.20654},
+             map: map,
+             icon:imageb,
+             animation: google.maps.Animation.DROP,
+             title: 'Canchas San Pedro - Basketball'
+          });
+          var marker16 = new google.maps.Marker({
+             position:{lat: -4.012977, lng: -79.199261},
+             map: map,
+             icon:imageb,
+             animation: google.maps.Animation.DROP,
+             title: 'Canchas de la Pradera - Basketball'
+          });
+          var marker17 = new google.maps.Marker({
+             position:{lat: -4.005392, lng: -79.200262},
+             map: map,
+             icon:imageb,
+             animation: google.maps.Animation.DROP,
+             title: 'Canchas Parque Infaltil - Basketball'
+        });
+
+        var marker18 = new google.maps.Marker({
+           position:{lat: -3.97207, lng: -79.204933},
+           map: map,
+           icon:imageb,
+           animation: google.maps.Animation.DROP,
+           title: 'Canchas de Basketball - Velasco Ibarra'
+        });
+
+        var marker19 = new google.maps.Marker({
+           position:{lat: -4.01923, lng: -79.203309},
+           map: map,
+           icon:imageb,
+           animation: google.maps.Animation.DROP,
+           title: 'Canchas de Basketball del Parque Lineal'
+        });
+
+        var marker20 = new google.maps.Marker({
+           position:{lat:  -3.957461, lng: -79.21727},
+           map: map,
+           icon:imageb,
+           animation: google.maps.Animation.DROP,
+           title: 'Canchas de Basketball Labanda'
+        });
+
+        var marker21 = new google.maps.Marker({
+           position:{lat:  -3.972512, lng: -79.210879},
+           map: map,
+           icon:imageb,
+           animation: google.maps.Animation.DROP,
+           title: 'Canchas de Basketball Las Pitas'
+        });
+
+        var marker22 = new google.maps.Marker({
+           position:{lat: -4.010507, lng: -79.193401},
+           map: map,
+           icon:imageb,
+           animation: google.maps.Animation.DROP,
+           title: 'Colinas Del Pucara, Basketball'
+        });
+
+        var marker23 = new google.maps.Marker({
+           position:{lat: -4.001599, lng: -79.233087},
+           map: map,
+           icon:imageb,
+           animation: google.maps.Animation.DROP,
+           title: 'Canchas Basketball - Cd. Victoria'
+        });
+
+        var marker24 = new google.maps.Marker({
+           position:{lat: -3.955922, lng: -79.219766},
+           map: map,
+           icon:imageb,
+           animation: google.maps.Animation.DROP,
+           title: 'Canchas Basketball - Complejo Deportivo Medicos de Loja'
+        });
+        "COMENTARIOS EN LAS UBICACIONES"
+        /*objeto con informacion html de una ubicacion*/
+        var Obj_Ifo={
+          content:'<div style="height:150px; width:300px">'+
+                      '<h2 align="center">Parque Recreacional Jipiro</h2>'+
+                      '<p>'+
+                        'Este parque sobresale por tener una gran variedad de réplicas de construcciones'+
+                        ' famosas y esculturas de las diferentes culturas del mundo como el'+ 
+                        'Baño de la Ñusta (Inca), Choza Shuar, Los Feriantes, Los Saraguros,'+
+                        ' Mezquita Árabe, Pirámide Maya, Puente Colonial, Puerta del Sol, Templo '+
+                        'indomalaíco, Torre Eiffel, entre otras.'+
+                        'En aproximadamente 10 hectáreas, ofrece un acogedor parque náutico con laguna,'+
+                        ' cisnes, patos, escenario para eventos, botes, bares, restaurantes, canchas y espacios para camping.'+
+                          '<br>'+
+                              '<strong>para mas informacion</strong>'+
+                              '<a href="https://www.ec.viajandox.com/loja/parque-jipiro-A311">   aca</a>'+
+                           
+                      '</p>'+
+                  '</div>'
+        } 
+        /*Se declara una variable para almacenar un objeto de la de  tipo InfoWindow que recibe como parmetro un objeto
+        con indformacion html*/
+        var informacion= new google.maps.InfoWindow(Obj_Ifo);
+        /*Se declara una variable que almacena un objeto un escuchador de eventos */
+        /*el addListener recibe tres parametrro que objeto esta esperando al evento, que evento quiero asignar 
+        y tercero la fucion que se asocia al clik de ese objeto, esa funcion va a encagarse de abrir laa ventana*/
+        var mostra=           google.maps.event.addListener(marker1, 'click', function() {
+          /*Abre la ventana de informacion cuando le haga click al marker1*/
+            informacion.open(map, marker1);
+            /*El obejto open recibe dos paramatros en que mapa y k marcador abrir*/ 
+        });
+        var Obj_Ifo={
+          content:'<div style="height:150px; width:300px">'+
+                      '<h2 align="center">Colinas Del Pucara</h2>'+
+                      '<p>'+
+                        'cuenta con 4 canchas, 1 restaurante, 2 miradores, plazoleta con fuentes y la colina con juegos para'+
+                        ' los niños, gimnasio al aire libre y una enorme área verde para relajarse y pasear las mascotas.'+
+                        '<br>'+
+                              '<strong>mas</strong>'+
+                              '<a href="https://lojacity.com/parque-colinar-pucara-podocarpus/"> aqui</a>'+
+                      '</p>'+
+                  '</div>'
+        } 
+        var informacion1= new google.maps.InfoWindow(Obj_Ifo);
+        var mostra= google.maps.event.addListener(marker2, 'click', function() {
+            informacion1.open(map, marker2);
+        });
+        var Obj_Ifo={
+          content:'<div style="height:150px; width:300px">'+
+                      '<h2 align="center">Jardin Botanico UNL</h2>'+
+                      '<p>'+
+                        'cuenta  con un área aproximada de 7 ha;  Localizado a 5km. De la ciudad  de Loja en la  vía  a Vilcabamba;'+
+                        'a 214 m.s.n.m., con una precipitación  anual de 900 mm y temperatura media  de 15,3 ⁰c. es el más  antiguo'+
+                        'del  Ecuador   y  el único ubicado en el nudo de  convergencia  de las corrientes  bioclimáticas cálidas'+
+                        'húmedas de la Amazonia y cálidas  secas  de la vertiente del  Pacífico, situación  que da  origen  a una'+
+                        'diversidad  florística única  de la hoya  y  provincia de Loja.'+
+                        '<br>'+
+
+            'En sus  predios  se han  inventariado 1385 especies  vegetales  entre nativas y exóticas  y una considerable'+
+            'fauna  asociada  a  este  sistema.  Se halla inscrito en la Organización Internacional  para la'+
+            'Conservación de Jardines  Botánicos  (BGCI). La  ubicación  de las  plantas en el jardín  no obedece a'+
+            'una distribución  sistemática ordenada, pero contribuye  un laboratorio biológico inigualable en el País.'+
+            '<br>'+
+                              '<strong>mas</strong>'+
+                              '<a href="http://unl.edu.ec/agropecuaria/ofertaacademica/jard%C3%ADn-bot%C3%A1nico-%E2%80%9Creinaldo-espinosa%E2%80%9D"> aqui</a>'+
+                      '</p>'+
+                  '</div>'
+        } 
+        var informacion2= new google.maps.InfoWindow(Obj_Ifo);
+        var mostra= google.maps.event.addListener(marker4, 'click', function() {
+            informacion2.open(map, marker4);
+        });
+
+      }
+    </script> 
+    <script async defe
+    /*archivo javascrip que carga todos los simbolos y definiciones que necesita para usar la API  JavaScrip de Maps*/
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkKiwHZLMchHVZq-LVd3Y0ngPsch_X6gM&callback=initMap">
+    </script>
+  </body>
+</html>

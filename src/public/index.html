@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sport Loja :: Tú página de información</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Compatible Smartphone" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- font -->
+
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!--<script src="js/SmoothScroll.min.js"></script>-->
+<script src="js/jarallax.js"></script>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<div class="w3ls-slider">
+			<div class="header-top">
+				<div class="container banner-drop">
+					<div class="agile-logo">
+						<h1><a href="/">Sport<span>Loja</span></a></h1>
+					</div>
+					<div class="header-right">
+							<nav>
+							  <ul>
+								<li class="active">
+									<a href="/"><span>Inicio</span></a>
+								</li>
+								<li>
+									<a href="about.html"><span>Información</span></a>
+								</li>
+								<li>
+									<a href="/paginafutbol"><span>Fútbol</span></a>
+								</li>
+								<li>
+									<a href="/paginabasket"><span>Basket</span></a>
+								</li>
+								<li>
+									<a href="/paginaparques"><span>Zonas Verdes</span></a>
+								</li>
+								<li>
+									<a href="mail.html"><span>Contacto</span></a>
+								</li>
+							  </ul>
+							</nav>
+							<div class="menu-icon"><span></span></div>
+					</div>
+					<div class="clearfix"> </div>
+					<script>
+						(function($){
+						  $(".menu-icon").on("click", function(){
+								$(this).toggleClass("open");
+								$(".container").toggleClass("nav-open");
+								$("nav ul li").toggleClass("animate");
+						  });
+						  
+						})(jQuery);
+					</script>
+				</div>
+			</div>
+					<div class="page-header__content">
+						<div class="text-bg">
+							<svg>
+								<defs>
+									<mask id="mask" x="0" y="0" width="100%" height="100%">
+										<rect id="alpha" x="0" y="0" width="100%" height="100%"/>
+										<text id="title1" x="50%" y="30%" dy="1em" letter-spacing="0.02em">SPORTLOJA</text>
+									</mask>
+									<mask id="mask-2" x="0" y="0" width="100%" height="100%">
+										<rect id="alpha-2" x="-66%" y="0" width="85%" height="100%" transform="skewX(40)"/>
+										<text id="title2" x="50%" y="30%" dy="1em" letter-spacing="0.02em">SPORTLOJA</text>
+									</mask>
+									<mask id="mask-3" x="0" y="0" width="100%" height="100%">
+										<rect id="alpha-3" x="-66%" y="0" width="70%" height="100%" transform="skewX(40)"/>
+										<text id="title3" x="50%" y="30%" dy="1em" letter-spacing="0.02em">SPORTLOJA</text>
+									</mask>
+								</defs>
+								<rect id="base" x="0" y="0" width="100%" height="100%" mask="url(#mask)"/>
+								<rect id="base-3" x="0" y="0" width="100%" height="100%" mask="url(#mask-2)"/>
+								<rect id="base-4" x="0" y="0" width="100%" height="100%" mask="url(#mask-3)"/>
+								<text id="title4" x="50%" y="30%" dy="1em" letter-spacing="0.01em">SPORTLOJA</text>
+							</svg>
+						</div>
+					</div>
+				<div class="w3l-banner-grids">
+					<div class="container">
+						<div class="slider">
+							<div class="callbacks_container">
+								<ul class="rslides" id="slider4">
+									<li>
+										<div class="w3ls-text">
+											<p>¡Bienvenido a tú página :: SportLoja</p>
+											<a href="about.html">Más aquí..!</a>
+										</div>
+									</li>
+									<li>
+										<div class="w3ls-text">
+											<p>Ubicaciones de las zonas Deportivas</p>
+											<a href="training.html">Más aquí..!</a>
+										</div>
+									</li>
+									<li>
+										<div class="w3ls-text">
+											<p>Fotos e información de todas las zonas Deportivas</p>
+											<a href="gallery.html">Más aquí..!</a>
+										</div>
+									</li>
+									<li>
+										<div class="w3ls-text">
+											<p>Nos interesa tu información sobre los sitios en Loja</p>
+											<a href="/datos_poblacion">Más aquí..!</a>
+										</div>
+									</li>
+									<li>
+										<div class="w3ls-text">
+											<p>¡También te informamos sobre parques y lagunas..!</p>
+											<a href="/paginaparques">Más aquí..!</a>
+										</div>
+									</li>
+									<li>
+										<div class="w3ls-text">
+											<p>¡Si tienes alguna duda contactanos!</p>
+											<a href="mail.html">Más aquí..!</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<script src="js/responsiveslides.min.js"></script>
+							<script>
+								// You can also use "$(window).load(function() {"
+								$(function () {
+								  // Slideshow 4
+								  $("#slider4").responsiveSlides({
+									auto: true,
+									pager:true,
+									nav:false,
+									speed: 500,
+									namespace: "callbacks",
+									before: function () {
+									  $('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+									  $('.events').append("<li>after event fired.</li>");
+									}
+								  });
+							
+								});
+							 </script>
+							<!--banner Slider starts Here-->
+						</div>
+					</div>
+				</div>
+		</div>
+		<div class="social-grids">
+			<div class="container">
+				<div class="agileinfo-social-grids">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-rss"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	
+	<!-- services -->
+	<div class="services">
+		<div class="container">
+			<div class="w3layouts-services-heading">
+				<h2>Nuestros Servicios</h2> 
+			</div>
+			<div class="w3-services-grids">
+				<div class="col-md-4 w3l-services-grid">
+					<div class="w3ls-services-img">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+					</div>
+					<div class="agileits-services-info">
+						<h4>Las mejores ubicaciones</h4>
+						<p>Tenemos las mejores ubicaciones en la ciudad, para hacer deporte 
+							o simplemente salir a conocer. 
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 w3l-services-grid">
+					<div class="w3ls-services-img">
+						<i class="fa fa-bicycle" aria-hidden="true"></i>
+					</div>
+					<div class="agileits-services-info">
+						<h4>Bicicletas al servicio</h4>
+						<p>¿Quieres dar una vuelta en bicicleta? <br> Aquí tienes las mejores opciones para que puedas 
+							pasear por toda la ciudad y ejercitarte, todas las ubicaciones son accesibles con bicicleta.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 w3l-services-grid">
+					<div class="w3ls-services-img">
+						<i class="fa fa-futbol-o" aria-hidden="true"></i>
+					</div>
+					<div class="agileits-services-info">
+						<h4>Fútbol para todos</h4>
+						<p>Todas las canchas públicas, para el conocimiento y empleo de todos los amantes del deporte rey.
+						</p>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //services -->
+	
+	<!-- history -->
+	<div class="jarallax history">
+		<div class="container">
+			<div class="agileinfo-history-grids">
+				<div class="slider">
+					<div class="callbacks_container">
+						<ul class="rslides" id="slider3">
+							<li>
+								<div class="wthree-history-info">
+									<h4>Para los amantes del deporte</h4>
+									<p>Te ofrecemos la información más actualizada para que puedas desarrollar tus deportes favoritos
+										en Loja, para que elijas dónde y lo que quieras hacer.</p>
+									<a href="training.html">Leer Más</a>
+								</div>
+							</li>
+							<li>
+								<div class="wthree-history-info">
+									<h4>!Ayudamos con tu información..!</h4>
+									<p>Queremos que nos ayudes con tu información sobre ubicaciones en la ciudad.</p>
+									<a href="/datos_poblacion">Leer Más</a>
+								</div>
+							</li>
+							<li>
+								<div class="wthree-history-info">
+									<h4>¡Conoce todas las zonas verdes de la ciudad!</h4>
+									<p>Queremos fomentar el ejercercio de la población lojana</p>
+									<a href="/paginaparques">Ver ubicaciones</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<script>
+								// You can also use "$(window).load(function() {"
+								$(function () {
+								  // Slideshow 4
+								  $("#slider3").responsiveSlides({
+									auto: true,
+									pager:false,
+									nav:false,
+									speed: 500,
+									namespace: "callbacks",
+									before: function () {
+									  $('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+									  $('.events').append("<li>after event fired.</li>");
+									}
+								  });
+							
+								});
+							 </script>
+							<!--banner Slider starts Here-->
+			</div>
+		</div>
+		<script type="text/javascript">
+			/* init Jarallax */
+			$('.jarallax').jarallax({
+				speed: 0.5,
+				imgWidth: 1366,
+				imgHeight: 768
+			})
+		</script>
+	</div>
+	<!-- //history -->
+	<!-- rides -->
+	<div class="rides">
+		<div class="container">
+			<div class="w3-agileits-rides-heading">
+				<h3>Ubicaciones Recientes</h3>
+			</div>
+			<div class="agileits-w3layouts-rides-grids">
+				<div class="col-sm-4 rides-grid">
+					<div class="rides-grid-info">
+						<img src="images/lagunacorazon.jpg" alt="" class="thumbnail"/>
+						<h4>Laguna Corazón</h4>
+						<p>Una laguna turistica en las afueras de la ciudad, la cual tiene forma de corazon como su nombre meciona.</p>
+						<ul>
+							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> <a href="training.html">Ir a las ubicaciones</a></li>
+							<!-- <li><i class="fa fa-arrow-right" aria-hidden="true"></i> <a href="map.html">Más ubicaciones</a></li>
+						</ul> -->
+					</div>
+				</div>
+				<div class="col-sm-4 rides-grid">
+					<div class="rides-grid-info"><br><br><br>
+						<img src="images/lagunacruz.jpg" alt="" class="thumbnail"/> 
+						<h4> Lagunas de la cruz</h4>
+						<p>Unas lagunas poco conocidas a las afueras de Loja, en el sector El capulí.</p>
+						<ul>
+							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> <a href="training.html">Ir a las ubicaciones</a></li>
+					</div>
+				</div>
+				<div class="col-sm-4 rides-grid">
+					<div class="rides-grid-info">
+						<img src="images/parquelineal.jpg" alt="" class="thumbnail"/>
+						<h4>Parque Lineal</h4>
+						<p>Un parque al sur de la ciudad, el cual cuenta con canchas para varios deportes, senderos para bicicletas y running, ademas de zonas para ejercitarse gratuitamente, y poder pasear cerca del río.</p>
+						<ul>
+							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> <a href="training.html">Ir a las ubicaciones</a></li>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="agileits-w3layouts-rides-grids">
+				<div class="col-sm-4 rides-grid">
+					<div class="rides-grid-info">
+						<img src="images/lagunadaniel.jpg" alt="" class="thumbnail"/>
+						<h4>Laguna de Daniel Alvarez</h4>
+						<p>Esta laguna, es un lugar perfecto para disfrutar cualquier día haciendo deporte o simplemente pasear, ya que cuenta con canchas deportivas, un sendero, juegos infantiles además de su laguna, ideal para poder distraerse.</p>
+						<ul>
+							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> <a href="training.html">Ir a las ubicaciones</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-4 rides-grid">
+					<div class="rides-grid-info"> <br><br><br>
+						<img src="images/senderozamora.jpg" alt="" class="thumbnail"/>
+						<h4>Sendero Zamora Huayco</h4>
+						<p>Este sendero cuenta con una laguna, y el se puede practicar el ciclismo, o running, además posee canchas de futbol y juegos infantiles.
+						</p>
+						<ul>
+							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> <a href="training.html">Ir a las ubicaciones</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-4 rides-grid">
+					<div class="rides-grid-info">
+						<img src="images/parquepucara.jpg" alt="" class="thumbnail"/>
+						<h4>Colinas Del Pucara</h4>
+						<p>El Parque Colinar Pucará Podocarpus, ubicado en la calle González Suárez, cuenta con 4 canchas, 1 restaurante, 2 miradores, plazoleta con fuentes y la colina con juegos para los niños, gimnasio al aire libre y una enorme área verde para relajarse y pasear las mascotas.</p>
+						<ul>
+							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> <a href="training.html">Ir a las ubicaciones</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //rides -->
+	
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="agile-footer-grids">
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Sobre nosotros</h3>
+					<p>Somos un grupo dedicado al deporte de nuestra ciudad y queremos brindar un mayor
+						acceso a los habitantes, para que tengan una excusa menos.</p>
+				</div>
+
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Apartados</h3>
+					<ul>
+						<li class="text"><a href="/">Inicio</a></li>
+						<li class="text"><a href="about.html">Información</a></li>
+						<li class="text"><a href="training.html">Deportes</a></li>
+						<li class="text"><a href="gallery.html">Galeria</a></li>
+						<li class="text"><a href="/paginaparques">Zonas</a></li>
+						<li class="text"><a href="mail.html">Contacto</a></li>
+						<li class="text"><a href="/datos_poblacion">Datos Poblacion</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Suscríbete</h3>
+					<form action="#" method="post">
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Ingresa tu email aquí" required="">
+						<input type="submit" value="Suscríbete">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<p>© 2018 SportLoja . All Rights Reserved | Diseñado por: Grupo1-4ºA </p>
+		</div>
+	</div>
+	<!-- //copyright -->
+</body>	
+</html>

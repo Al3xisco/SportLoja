@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parques - Ubicaciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href="css/font-awesome.css" rel="stylesheet"> 
+
+    <style>
+      /* Estilo CSS...se la da la alturaque tendra el mapa*/
+      
+      #map {
+        margin: auto;
+        height: 70%;
+        width: 80%;
+      }
+      /*Del mismo modo el html y cuerpo tinene que tener una 
+      altura para poder visualizar el mapa */
+      html, body {
+        padding: 0px;
+        height: 100%;
+      }
+    </style>
+  </head>
+ <body>
+    <!--Se crea Un div para contener el mpa-->
+    <div id="map"></div>
+
+    <script>
+      /*Variable que sirve pa almacenar el mapa*/
+      
+
+      function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          /*distancia que tendra la visualizacion del mapa*/
+          zoom: 13,
+          /*Cordenadas de */
+          center: {lat: -4.007891, lng: -79.211277},
+          mapTypeId: 'roadmap'
+        });
+        
+        var image = './images/parque.png';
+
+         var MarcadorArrastable = new google.maps.Marker({
+            position: {lat: -4.007891, lng: -79.211277},
+            map: map,
+            draggable:true,
+            title:"Arrastrame! "
+        });
+
+          var marker = new google.maps.Marker({
+             position:{lat: -3.971977, lng: -79.203529},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Jipiro'
+          });     
+
+          var marker1 = new google.maps.Marker({
+             position:{lat: -4.010507, lng: -79.193401},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Colinas Del Pucara'
+          });
+          var marker2 = new google.maps.Marker({
+             position:{lat: -4.014612, lng: -79.202836},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Parque Lineal'
+          });
+          var marker3 = new google.maps.Marker({
+             position:{lat: -4.037135, lng: -79.198959},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Jardin Botanico UNL'
+          });
+
+          var marker5 = new google.maps.Marker({
+             position:{lat: -4.008667, lng: -79.187007},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Sendero Zamora Huayco'
+          });
+
+          var marker9 = new google.maps.Marker({
+             position:{lat: -4.013129, lng: -79.197489},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Parque de la Pradera'
+          });
+          var marker10 = new google.maps.Marker({
+             position:{lat: -3.995094, lng: -79.204755},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Parque Simón Bolívar'
+          });
+
+          var marker11 = new google.maps.Marker({
+             position:{lat: -3.996621, lng: -79.201581},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Parque Central'
+          });
+
+          var marker12 = new google.maps.Marker({
+             position:{lat: -4.006665, lng: -79.207104},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'San Pedro "Parque De La Musica"'
+          });
+
+          var marker13 = new google.maps.Marker({
+             position:{lat: -3.995026, lng: -79.202049},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Plaza de San Francisco'
+          });
+
+          var marker14 = new google.maps.Marker({
+             position:{lat: -4.005996, lng: -79.204458},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Parque Julio Hidalgo González'
+          });
+
+          var marker15 = new google.maps.Marker({
+             position:{lat: -4.003341, lng: -79.194382},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Plazoleta Manuel De Jesus Lozano'
+          });
+
+          var marker16 = new google.maps.Marker({
+             position:{lat: -3.972082, lng: -79.204887},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'CYBERTREN'
+          });
+
+          var marker17 = new google.maps.Marker({
+             position:{lat: -3.995861, lng: -79.198149},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Parque Cristóbal Ojeda Dávila'
+          });
+
+          var marker18 = new google.maps.Marker({
+             position:{lat: -3.97202, lng: -79.203521},
+             map: map,
+             icon:image,
+             animation: google.maps.Animation.DROP,
+             title: 'Parque Jipiro, Bicicletas'
+          });
+        "COMENTARIOS EN LAS UBICACIONES"
+        /*objeto con informacion html de una ubicacion*/
+        var Obj_Ifo={
+          content:'<div style="height:150px; width:300px">'+
+                      '<h2 align="center">Parque Recreacional Jipiro</h2>'+
+                      '<p>'+
+                        'Este parque sobresale por tener una gran variedad de réplicas de construcciones'+
+                        ' famosas y esculturas de las diferentes culturas del mundo como el'+ 
+                        'Baño de la Ñusta (Inca), Choza Shuar, Los Feriantes, Los Saraguros,'+
+                        ' Mezquita Árabe, Pirámide Maya, Puente Colonial, Puerta del Sol, Templo '+
+                        'indomalaíco, Torre Eiffel, entre otras.'+
+                        'En aproximadamente 10 hectáreas, ofrece un acogedor parque náutico con laguna,'+
+                        ' cisnes, patos, escenario para eventos, botes, bares, restaurantes, canchas y espacios para camping.'+
+                          '<br>'+
+                              '<strong>para mas informacion</strong>'+
+                              '<a href="https://www.ec.viajandox.com/loja/parque-jipiro-A311">   aca</a>'+
+                           
+                      '</p>'+
+                  '</div>'
+        } 
+        /*Se declara una variable para almacenar un objeto de la de  tipo InfoWindow que recibe como parmetro un objeto
+        con indformacion html*/
+        var informacion= new google.maps.InfoWindow(Obj_Ifo);
+        /*Se declara una variable que almacena un objeto un escuchador de eventos */
+        /*el addListener recibe tres parametrro que objeto esta esperando al evento, que evento quiero asignar 
+        y tercero la fucion que se asocia al clik de ese objeto, esa funcion va a encagarse de abrir laa ventana*/
+        var mostra=           google.maps.event.addListener(marker1, 'click', function() {
+          /*Abre la ventana de informacion cuando le haga click al marker1*/
+            informacion.open(map, marker1);
+            /*El obejto open recibe dos paramatros en que mapa y k marcador abrir*/ 
+        });
+        var Obj_Ifo={
+          content:'<div style="height:150px; width:300px">'+
+                      '<h2 align="center">Colinas Del Pucara</h2>'+
+                      '<p>'+
+                        'cuenta con 4 canchas, 1 restaurante, 2 miradores, plazoleta con fuentes y la colina con juegos para'+
+                        ' los niños, gimnasio al aire libre y una enorme área verde para relajarse y pasear las mascotas.'+
+                        '<br>'+
+                              '<strong>mas</strong>'+
+                              '<a href="https://lojacity.com/parque-colinar-pucara-podocarpus/"> aqui</a>'+
+                      '</p>'+
+                  '</div>'
+        } 
+        var informacion1= new google.maps.InfoWindow(Obj_Ifo);
+        var mostra= google.maps.event.addListener(marker2, 'click', function() {
+            informacion1.open(map, marker2);
+        });
+        var Obj_Ifo={
+          content:'<div style="height:150px; width:300px">'+
+                      '<h2 align="center">Jardin Botanico UNL</h2>'+
+                      '<p>'+
+                        'cuenta  con un área aproximada de 7 ha;  Localizado a 5km. De la ciudad  de Loja en la  vía  a Vilcabamba;'+
+                        'a 214 m.s.n.m., con una precipitación  anual de 900 mm y temperatura media  de 15,3 ⁰c. es el más  antiguo'+
+                        'del  Ecuador   y  el único ubicado en el nudo de  convergencia  de las corrientes  bioclimáticas cálidas'+
+                        'húmedas de la Amazonia y cálidas  secas  de la vertiente del  Pacífico, situación  que da  origen  a una'+
+                        'diversidad  florística única  de la hoya  y  provincia de Loja.'+
+                        '<br>'+
+
+            'En sus  predios  se han  inventariado 1385 especies  vegetales  entre nativas y exóticas  y una considerable'+
+            'fauna  asociada  a  este  sistema.  Se halla inscrito en la Organización Internacional  para la'+
+            'Conservación de Jardines  Botánicos  (BGCI). La  ubicación  de las  plantas en el jardín  no obedece a'+
+            'una distribución  sistemática ordenada, pero contribuye  un laboratorio biológico inigualable en el País.'+
+            '<br>'+
+                              '<strong>mas</strong>'+
+                              '<a href="http://unl.edu.ec/agropecuaria/ofertaacademica/jard%C3%ADn-bot%C3%A1nico-%E2%80%9Creinaldo-espinosa%E2%80%9D"> aqui</a>'+
+                      '</p>'+
+                  '</div>'
+        } 
+        var informacion2= new google.maps.InfoWindow(Obj_Ifo);
+        var mostra= google.maps.event.addListener(marker4, 'click', function() {
+            informacion2.open(map, marker4);
+        });
+
+      }
+    </script> 
+    <script async defe
+    /*archivo javascrip que carga todos los simbolos y definiciones que necesita para usar la API  JavaScrip de Maps*/
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkKiwHZLMchHVZq-LVd3Y0ngPsch_X6gM&callback=initMap">
+    </script>
+  </body>
+</html>

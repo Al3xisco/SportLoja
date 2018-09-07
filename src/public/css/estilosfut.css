@@ -1,0 +1,32 @@
+.cuerpo{
+	background-color:#232323;
+	margin:0px 150px 0px 150px;
+	padding:0; 
+	font-size:13px;
+	font-family: Georgia, "New Century Schoolbook", TeX Gyre Schola, serif; 
+	height: 100%;+
+
+}
+#map{
+	margin: auto;
+	height: 70%;
+	width: 80%;
+}html{
+	padding: 0px;
+	height: 100%;
+}#titulo{
+	text-shadow: 3px 2px #20B2AA;
+	color: blue;
+	margin: none;
+}.contenedor{
+	margin: 0px 105px 0px 105px;
+	background-color: white;
+}p{
+	padding:0px 150px 0px 50px; 
+}img{
+	position: absolute;
+     left:14px;
+     width: 220px;
+     height:100%;
+     
+}

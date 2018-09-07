@@ -1,0 +1,237 @@
+<!-- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sport Loja :: Tú página de información</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/Sketchybootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- <script src="js/SmoothScroll.min.js"></script> -->
+<script src="js/jarallax.js"></script>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner bg-about">
+		<div class="header-top about-header-top">
+			<div class="container banner-drop">
+				<div class="agile-logo">
+						<h1><a href="/">Sport<span>Loja</span></a></h1>
+					</div>
+					<div class="header-right">
+							<nav>
+							  <ul>
+								<li class="active">
+									<a href="/"><span>Inicio</span></a>
+								</li>
+								<li>
+									<a href="about.html"><span>Información</span></a>
+								</li>
+								<li>
+									<a href="/paginafutbol"><span>Fútbol</span></a>
+								</li>
+								<li>
+									<a href="/paginabasket"><span>Basket</span></a>
+								</li>
+								<li>
+									<a href="/paginaparques"><span>Zonas Verdes</span></a>
+								</li>
+								<li>
+									<a href="mail.html"><span>Contacto</span></a>
+								</li>
+							  </ul>
+							</nav>
+							<div class="menu-icon"><span></span></div>
+					</div>
+					<div class="clearfix"> </div>
+				<script>
+					(function($){
+					  $(".menu-icon").on("click", function(){
+							$(this).toggleClass("open");
+							$(".container").toggleClass("nav-open");
+							$("nav ul li").toggleClass("animate");
+					  });
+					  
+					})(jQuery);
+				</script>
+			</div>
+		</div>
+		<div class="w3ls-heading">
+			<h2>¡Tu información es importante!</h2>	
+		</div>
+	</div>
+	<!-- //banner -->
+		
+		<!-- choose -->
+		<div class="jarallax w3-agileits-choose">
+			<div class="container">
+				<div class="agileits-about-top-heading agileits-w3layouts-choose-heading">
+				</div>
+				<div class="agile-choose-grids">
+					<div class="col-sm-5 agile-choose-grid">
+						<div class="choose-icon">
+							<i class="fa fa-table" aria-hidden="true"></i>
+						</div>
+						<div class="choose-info">
+							<h4>Comparte tus sitios con los demás</h4>
+							<p>Si sabes de algun lugar nuevo o que no aparezca en las ubicaciones, ayudamos, comparte con todos los lojanos. Para poder mejorar entre todos.<br> Estudiaremos la información que nos brindes y actualizaremos las ubicaciones.</p>
+						</div>
+					</div>
+					<div class="col-sm-7 agile-choose-grid">
+						<div class="col-sm-8 wthree-top-grid">
+								<img src="images/data.jpg" alt=""  class="img-thumbnail"/>
+								<h4>Toda nuestra información a tu servicio:<br>Aquí puedes consultar o ingresar cualquier información, para tomarlo en cuenta en una futura actualización.</h4>
+							</div>
+					</div>
+
+				</div>	
+			</div>
+			<script type="text/javascript">
+				/* init Jarallax */
+				$('.jarallax').jarallax({
+					speed: 0.5,
+					imgWidth: 1366,
+					imgHeight: 768
+				})
+			</script>
+		</div>
+		<!-- //choose -->
+		
+		<!-- about -->
+	<div class="about">
+		<!-- about-top -->
+		<div class="agileits-about-top">
+			<div class="container">
+				
+				<div class="">
+					<div class="col-sm-12 wthree-top-grid"> 
+						<h4>Ingresa tu información</h4>
+					</div>
+					<div class="clearfix"> </div>
+
+					<div class="card">
+			              <div class="card-header">Registrar </div>
+			                <div class="card-body">
+			                  <form class="" action="/datos_poblacion/Insertar" method="POST">
+			                    <div class="form-group">
+			                      <label for="">Nombre del sitio</label>
+			                      <input type="text" name="Nombre" value="" class="form-control">
+			                      <label for="">Tipo de Cancha</label>
+			                      <input type="text" name="Tipo_Cancha" value="" class="form-control">
+			                      <label for="">Sector</label>
+			                      <input type="text" name="Sector" value="" class="form-control">
+			                      <label for="">Direccion P.</label>
+			                      <input type="text" name="Direc_Principal" value="" class="form-control">
+			                      <label for="">Direccion Sec.</label>
+			                      <input type="text" name="Direc_Secundaria" value="" class="form-control">
+			                    </div>
+			                    <div class="">
+			                      <input type="submit"  value="Insertar" class="btn btn-primary btn-block">
+			                    </div>
+			                  </form>
+			                </div>
+			        	</div>
+
+					<!-- tabla myslq -->
+					<div class="container">
+				      	<div class="row mt-5">
+					       	<table class="table">
+					            <thead> <!--  cabecera -->
+					              <!--fila  -->
+					              <tr class="table-info">
+					                <!-- atributos o cabeceras -->
+					                <th>Id</th>
+					                <th>Nombre del sitio</th>
+					                <th>Tipo de Cancha</th>
+					                <th>Sector</th>
+					                <th>Direccion Pric</th>
+					                <th>Direccion Sec</th>
+					                <th>Acciones</th>
+					              </tr>
+					            </thead>
+					            <!-- subcuerpo -->
+					            <tbody>
+					               <% if(data){ %>
+					                 <% for(var i = 0;i < data.length;i++) { %>
+					                   <tr >
+					                     <td><%= data[i].Id %></td>
+					                     <td><%= data[i].Nombre %></td>
+					                     <td><%= data[i].Tipo_Cancha %></td>
+					                     <td><%= data[i].Sector %></td>
+					                     <td><%= data[i].Direc_Principal %></td>
+					                     <td><%= data[i].Direc_Secundaria %></td>
+					                     <td> 
+					                     	<a href="/datos_poblacion/borrar/<%= data[i].Id %>" class="btn btn-outline-danger form-control">Borrar</a>
+	                      					<a href="/datos_poblacion/actualizar/<%= data[i].Id %>" class="btn btn-outline-success form-control">Actualizar</a>
+                     					 </td>
+					                   </tr>
+					                   <% } %>
+					              <% } %>
+					            </tbody>
+					       	</table>
+				        </div>
+			            
+					</div>
+					 <!-- //tabla myslq -->
+
+				</div>
+			</div>
+		</div>
+		<!-- //about-top -->
+	</div>
+	<!-- //about -->
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="agile-footer-grids">
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Sobre nosotros</h3>
+					<p>Somos un grupo dedicado al deporte de nuestra ciudad y queremos brindar un mayor
+						acceso a los habitantes.</p>
+				</div>
+
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Apartados</h3>
+					<ul>
+						<li class="text"><a href="index.html">Inicio</a></li>
+						<li class="text"><a href="about.html">Información</a></li>
+						<li class="text"><a href="short-codes.html">Deportes</a></li>
+						<li class="text"><a href="gallery.html">Galeria</a></li>
+						<li class="text"><a href="training.html">Zonas</a></li>
+						<li class="text"><a href="mail.html">Contacto</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Suscríbete</h3>
+					<form action="#" method="post">
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
+						<input type="submit" value="Subscribe">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<p>© 2018 SportLoja . All Rights Reserved | Diseñado por: Grupo1-4ºA  </p>
+		</div>
+	</div>
+	<!-- //copyright -->
+</body>	
+</html>

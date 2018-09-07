@@ -1,0 +1,277 @@
+<!-- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sport Loja :: Tú página de información</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/Sketchybootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css --> 
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- <script src="js/SmoothScroll.min.js"></script> -->
+<script src="js/jarallax.js"></script>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner bg-about">
+		<div class="header-top about-header-top">
+			<div class="container banner-drop">
+				<div class="agile-logo">
+						<h1><a href="/">Sport<span>Loja</span></a></h1>
+					</div>
+					<div class="header-right">
+							<nav>
+							  <ul>
+								<li class="active">
+									<a href="/"><span>Inicio</span></a>
+								</li>
+								<li>
+									<a href="about.html"><span>Información</span></a>
+								</li>
+								<li>
+									<a href="/paginafutbol"><span>Fútbol</span></a>
+								</li>
+								<li>
+									<a href="/paginabasket"><span>Basket</span></a>
+								</li>
+								<li>
+									<a href="/paginaparques"><span>Zonas Verdes</span></a>
+								</li>
+								<li>
+									<a href="mail.html"><span>Contacto</span></a>
+								</li>
+							  </ul>
+							</nav>
+							<div class="menu-icon"><span></span></div>
+					</div>
+					<div class="clearfix"> </div>
+				<script>
+					(function($){
+					  $(".menu-icon").on("click", function(){
+							$(this).toggleClass("open");
+							$(".container").toggleClass("nav-open");
+							$("nav ul li").toggleClass("animate");
+					  });
+					  
+					})(jQuery);
+				</script>
+			</div>
+		</div>
+		<div class="w3ls-heading">
+			<h2>Datos</h2>	
+		</div>
+	</div>
+	<!-- //banner -->
+		
+		<!-- choose -->
+		<div class="jarallax w3-agileits-choose">
+			<div class="container">
+				<div class="agileits-about-top-heading agileits-w3layouts-choose-heading">
+					<h3> </h3>
+				</div>
+				<div class="agile-choose-grids">
+					<div class="col-sm-6 agile-choose-grid">
+						<div class="choose-icon">
+							<i class="fa fa-database" aria-hidden="true"></i>
+						</div>
+						<div class="choose-info">
+							<h4>Nuestros datos</h4>
+							<p>Aquí puedes disponer de nuestros datos abiertos. </p>
+						</div>
+					</div>
+					<div class="col-sm-6 agile-choose-grid">
+						<div class="choose-icon">
+							<i class="fa fa-table" aria-hidden="true"></i>
+						</div>
+						<div class="choose-info">
+							<h4>Tablas de datos</h4>
+							<p>Usamos Nodejs, MySql y Bootstrap para que puedas visualizar nuestros datos.</p>
+						</div>
+					</div>
+
+					
+
+				</div>	
+			</div>
+			<script type="text/javascript">
+				/* init Jarallax */
+				$('.jarallax').jarallax({
+					speed: 0.5,
+					imgWidth: 1366,
+					imgHeight: 768
+				})
+			</script>
+		</div>
+		<!-- //choose -->
+		
+		<!-- about -->
+	<div class="about">
+		<!-- about-top -->
+		<div class="agileits-about-top">
+			<div class="container">
+				<div class="agileits-about-top-heading">
+					<h3>Todos nuestros Datos</h3>
+				</div>
+				<div class="agileinfo-top-grids">
+					<div class="col-sm-2 wthree-top-grid">
+						<img src="images/" alt="" /> <br>
+						<br><h4>  </h4>
+						<p>  </p>
+					</div>
+					<div class="col-sm-8 wthree-top-grid">
+						<img src="images/bd.jpg" alt=""  class="img-thumbnail"/>
+						<h4>Toda nuestra información a tu servicio:<br>Aquí puedes consultar sobre los sitios actuales.</h4>
+						
+					</div>
+					<div class="col-sm-2 wthree-top-grid"> 
+						<img src="images/.jpg" alt="" />
+						<h4>  </h4>
+						<p> </p>
+					</div>
+					<div class="clearfix"> </div>
+
+					<!-- tabla futbol myslq -->
+					<div class="container">
+				      	<div class="row mt-5">
+					       	<table class="table">
+					            <thead>
+					              <!--fila  -->
+					              <tr><h2> Datos sobre Ubicaciones de Fútbol</h2></tr>
+					              <tr class="table-info">
+					                <th>idFutbol</th>
+					                <th>Complejo</th>
+					                <th>Nombre de la Cancha</th>
+					                <th>Sector</th>
+					                <th>Direccion Pric</th>
+					                <th>Direccion Sec</th>
+					                <th>Horario</th>
+					                <th>Telefonos</th>
+					              </tr>
+					            </thead>
+
+					               <% if(data){ %>
+					                 <% for(var i = 0;i < data.length;i++) { %>
+					                   <tr >
+					                     <td><%= data[i].idFutbol %></td>
+					                     <td><%= data[i].Complejo %></td>
+					                     <td><%= data[i].Nombre_Cancha %></td>
+					                     <td><%= data[i].Sector %></td>
+					                     <td><%= data[i].Direc_Principal %></td>
+					                     <td><%= data[i].Direc_Seccundaria %></td>
+					                     <td><%= data[i].Horario %></td>
+					                     <td><%= data[i].Telefonos %></td>
+					                     </td> 
+					                   </tr>
+					                   <% } %>
+					              <% } %>
+					       	</table>
+				        </div>	
+				        <div class="progress">
+						  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+						</div>
+					</div>
+					<!-- //tabla futbol myslq -->
+
+					<!-- //tabla basket myslq -->
+					<% include tablabasket %>
+					<!-- //tabla basket myslq -->
+					
+					<!-- tabla parques myslq -->
+					<div class="container">
+				      	<div class="row mt-5">
+					       	<table class="table">
+					            <thead>
+					              <!--fila  -->
+					              <tr><h2> Datos sobre Ubicaciones de Fútbol</h2></tr>
+					              <tr class="table-info">
+					                <th>idFutbol</th>
+					                <th>Complejo</th>
+					                <th>Nombre de la Cancha</th>
+					                <th>Sector</th>
+					                <th>Direccion Pric</th>
+					                <th>Direccion Sec</th>
+					                <th>Horario</th>
+					                <th>Telefonos</th>
+					              </tr>
+					            </thead>
+
+					               <% if(data){ %>
+					                 <% for(var i = 0;i < data.length;i++) { %>
+					                   <tr >
+					                     <td><%= data[i].idFutbol %></td>
+					                     <td><%= data[i].Complejo %></td>
+					                     <td><%= data[i].Nombre_Cancha %></td>
+					                     <td><%= data[i].Sector %></td>
+					                     <td><%= data[i].Direc_Principal %></td>
+					                     <td><%= data[i].Direc_Seccundaria %></td>
+					                     <td><%= data[i].Horario %></td>
+					                     <td><%= data[i].Telefonos %></td>
+					                     </td> 
+					                   </tr>
+					                   <% } %>
+					              <% } %>
+					       	</table>
+				        </div>	
+					</div>
+					<!-- //tabla parques myslq -->
+
+				</div>
+			</div>
+		</div>
+		<!-- //about-top -->
+		
+	</div>
+	<!-- //about -->
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="agile-footer-grids">
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Sobre nosotros</h3>
+					<p>Somos un grupo dedicado al deporte de nuestra ciudad y queremos brindar un mayor
+						acceso a los habitantes, para que tengan una excusa menos.</p>
+				</div>
+
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Apartados</h3>
+					<ul>
+						<li class="text"><a href="index.html">Inicio</a></li>
+						<li class="text"><a href="about.html">Información</a></li>
+						<li class="text"><a href="short-codes.html">Deportes</a></li>
+						<li class="text"><a href="gallery.html">Galeria</a></li>
+						<li class="text"><a href="training.html">Zonas</a></li>
+						<li class="text"><a href="mail.html">Contacto</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Suscríbete</h3>
+					<form action="#" method="post">
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
+						<input type="submit" value="Subscribe">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<p>© 2018 SportLoja . All Rights Reserved | Diseñado por: Grupo1-4ºA  </p>
+		</div>
+	</div>
+	<!-- //copyright -->
+</body>	
+</html>
